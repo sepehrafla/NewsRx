@@ -1,0 +1,6 @@
+framework module Pods_NewsRx {
+  umbrella header "Pods-NewsRx-umbrella.h"
+
+  export *
+  module * { export * }
+}
