@@ -22,7 +22,7 @@ class NewsListViewController: UIViewController {
         return label
     }()
     
-    var tableView = UITableView()
+    lazy var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class NewsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ArticleTableViewCell.self, forCellReuseIdentifier: "ArticleTableViewCell")
-        tableView.rowHeight = 70
+        tableView.rowHeight = 150
         tableView.snp.makeConstraints{make in
             make.top.equalTo(titleLable.snp.bottom).offset(5)
             make.leading.trailing.bottom.equalToSuperview().inset(5)

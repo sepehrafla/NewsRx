@@ -10,7 +10,12 @@ import UIKit
 
 class ArticleTableViewCell : UITableViewCell {
     static let Identifier = "ArticleTableViewCell"
-    var titleLabel = UILabel()
+    lazy var titleLabel : UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 17)
+        label.numberOfLines = 3
+        return label
+    }()
     var descriptionLabel = UILabel()
 
     override init (style: UITableViewCell.CellStyle, reuseIdentifier: String?){
@@ -24,19 +29,17 @@ class ArticleTableViewCell : UITableViewCell {
     
     func setupview () {
         addSubview(titleLabel)
-        titleLabel.numberOfLines = 0
-        titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.snp.makeConstraints{make in
             make.top.equalTo(safeAreaLayoutGuide).offset(5)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
-            make.height.lessThanOrEqualTo(60)
-            make.width.lessThanOrEqualTo(90)
+            make.trailing.equalTo(safeAreaLayoutGuide).inset(5)
         }
         addSubview(descriptionLabel)
-        descriptionLabel.numberOfLines = 3
-        descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.numberOfLines = 5
         descriptionLabel.snp.makeConstraints{make in
-            make.top.equalTo(titleLabel).offset(5)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(5)
+            make.trailing.equalTo(safeAreaLayoutGuide).inset(5)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
         }
     }

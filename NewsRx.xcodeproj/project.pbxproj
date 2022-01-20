@@ -15,6 +15,7 @@
 		BE1E2106278CB67F00C7136A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE1E2104278CB67F00C7136A /* LaunchScreen.storyboard */; };
 		BE36BCE2278CE02A00B99E2C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36BCE1278CE02A00B99E2C /* Article.swift */; };
 		BE36BCE4278CE20400B99E2C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36BCE3278CE20400B99E2C /* ArticleTableViewCell.swift */; };
+		BE36BCE92799F58800B99E2C /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE36BCE82799F58800B99E2C /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		BE1E2107278CB67F00C7136A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE36BCE1278CE02A00B99E2C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BE36BCE3278CE20400B99E2C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		BE36BCE82799F58800B99E2C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		FF194CBF2D1FE626B755E104 /* Pods-NewsRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsRx.release.xcconfig"; path = "Target Support Files/Pods-NewsRx/Pods-NewsRx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		BE36BCE7278DE24700B99E2C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BE36BCE82799F58800B99E2C /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				BE36BCE4278CE20400B99E2C /* ArticleTableViewCell.swift in Sources */,
 				BE36BCE2278CE02A00B99E2C /* Article.swift in Sources */,
 				BE1E20FE278CB67500C7136A /* NewsListViewController.swift in Sources */,
+				BE36BCE92799F58800B99E2C /* ArticleViewModel.swift in Sources */,
 				BE1E20FA278CB67500C7136A /* AppDelegate.swift in Sources */,
 				BE1E20FC278CB67500C7136A /* SceneDelegate.swift in Sources */,
 			);
