@@ -59,7 +59,7 @@ class NewsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ArticleTableViewCell.self, forCellReuseIdentifier: "ArticleTableViewCell")
-        tableView.rowHeight = 150
+        tableView.rowHeight = 250
         tableView.snp.makeConstraints{make in
             make.top.equalTo(titleLable.snp.bottom).offset(5)
             make.leading.trailing.bottom.equalToSuperview().inset(5)
@@ -73,8 +73,10 @@ extension NewsListViewController : UITableViewDelegate , UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell else{
             fatalError("Article Does Not Exist")
         }
+        print(articles)
         cell.titleLabel.text = self.articles[indexPath.row].title
         cell.descriptionLabel.text = self.articles[indexPath.row].description
+        cell.labelImageView.text = self.articles[indexPath.row].description
         
         return cell
     }
