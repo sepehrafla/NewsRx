@@ -34,10 +34,10 @@ class ArticleTableViewCell : UITableViewCell {
         addSubview(labelImageView)
         addSubview(descriptionLabel)
         titleLabel.snp.makeConstraints{make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(15)
+            make.top.equalTo(labelImageView.snp.bottom).offset(15)
             make.leading.equalTo(safeAreaLayoutGuide).offset(5)
             make.trailing.equalTo(safeAreaLayoutGuide).inset(5)
-            make.bottom.equalTo(descriptionLabel.snp.top).inset(5)
+            make.bottom.equalTo(descriptionLabel.snp.top).offset(2)
         }
         descriptionLabel.numberOfLines = 5
         descriptionLabel.snp.makeConstraints{make in
