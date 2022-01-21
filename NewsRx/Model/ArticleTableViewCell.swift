@@ -17,7 +17,7 @@ class ArticleTableViewCell : UITableViewCell {
         return label
     }()
     var descriptionLabel = UILabel()
-    var labelImageView = UILabel()
+    var labelImageView = UIImageView()
 
     override init (style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -49,6 +49,8 @@ class ArticleTableViewCell : UITableViewCell {
         labelImageView.snp.makeConstraints { make in
             make.bottom.equalTo(titleLabel.snp.top).offset(1)
             make.top.equalTo(safeAreaLayoutGuide).offset(1)
+            make.width.equalTo(100)
+            make.height.equalTo(100)
         }
     }
 }

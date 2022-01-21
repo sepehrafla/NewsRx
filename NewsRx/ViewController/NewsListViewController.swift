@@ -73,10 +73,12 @@ extension NewsListViewController : UITableViewDelegate , UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell else{
             fatalError("Article Does Not Exist")
         }
-        print(articles)
         cell.titleLabel.text = self.articles[indexPath.row].title
         cell.descriptionLabel.text = self.articles[indexPath.row].description
-        cell.labelImageView.text = self.articles[indexPath.row].description
+        let imageurl = self.articles[indexPath.row].urlToImage ?? "https://cdn.arstechnica.net/wp-content/uploads/2018/06/macOS-Mojave-Dynamic-Wallpaper-transition.jpg"
+        let url = URL(string: imageurl)
+        let data = try? Data(contentsOf: url!)
+        cell.labelImageView.image = UIImage(data: data!)
         
         return cell
     }
